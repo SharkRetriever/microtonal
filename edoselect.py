@@ -67,11 +67,9 @@ def print_progressively_better_edos(edo_records):
         print(edo_string)
 
 def main():
-    ratio_input_lists = [["3/2", "5/4", "6/5"], ["3/2", "5/4", "6/5", "9/8"],
-        ["3/2", "5/4", "6/5", "9/8", "7/4"], ["3/2", "5/4", "6/5", "9/8", "7/4", "11/8"],
-        ["3/2", "5/4", "6/5", "9/8", "7/4", "11/8", "7/5"],
-        ["3/2", "5/4", "6/5", "9/8", "7/4", "11/8", "7/5", "7/6", "9/7"],
-        ["3/2", "5/4", "6/5", "9/8", "7/4", "11/8", "7/5", "7/6", "9/7", "11/9"]]
+    ratio_input_lists = [["3/2", "5/4", "6/5", "9/8"],
+        ["3/2", "5/4", "6/5", "9/8", "7/4", "9/7", "7/6", "7/5"], 
+        ["3/2", "5/4", "6/5", "9/8", "7/4", "9/7", "7/6", "7/5", "11/8", "11/9"]]
     for ratio_input_list in ratio_input_lists:
         progressively_better_edos = find_progressively_better_edos(ratio_input_list, highest_edo = 200)
         print_progressively_better_edos(progressively_better_edos)
